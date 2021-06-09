@@ -82,7 +82,7 @@ session_start();
     
 </li>
 <li class="nav-item">
-    <a class="nav-link" href="ajouter-agence.php">
+    <a class="nav-link" href="charts.html">
          <i class="material-icons">home</i>
         <span>AGENCES</span></a>
 </li>
@@ -273,88 +273,40 @@ session_start();
             
                         </div>
 
-                        <!-- Earnings (Monthly) Card Example -->
-                        
+                
+
+                        <!-- Pending Requests Card Example -->
                         <div class="col-xl-3 col-md-6 mb-4">            
-                            <a class="btn btn-success btn-sm" href="liste-agence.php">LISTE AGENCE </a>
+                            <a class="btn btn-success btn-sm" href="liste-agence.php">LISTE AGENCES  </a>
             
                         </div>
-
-                        
                     </div>
 
                     
                     <!-- Content Row -->
-                   
+                    <div class="row">
 
-                       
-                     <div class="aj-admin">
-                         <div class="register-box">
-                           <div class="card card-outline card-primary">
-    
+                        <div >
 
-                            <!-- Ajouter Agence-->
-                              
-                            <div class="card-body">
-                               <p class="login-box-msg">Ajouter un Agence</p>
-
-                                    <form action="../controller/Agenceadd.php" method="post">
-                                         <div class="input-group mb-3">
-                                           <input type="text" class="form-control" placeholder="NOM AGENCE" name="nomAgence">
-                                                  <div class="input-group-append">
-                                                      <div class="input-group-text">
-                                                           <span class="material-icons">person</span>
-                                                        </div>
-                                                    </div>
-        
-                                        
-                                        </div>
-
-                                        <div class="input-group mb-3">
-                                           <input type="text" class="form-control" placeholder="ADRESSE" name="adresse">
-                                                  <div class="input-group-append">
-                                                      <div class="input-group-text">
-                                                           <span class="material-icons">place</span>
-                                                        </div>
-                                                    </div>
-                                        </div>    
-                                        <div class="input-group mb-3">
-                                            <input type="email" class="form-control" placeholder="EMAIL" name="email">
-                                                 <div class="input-group-append">
-                                                        <div class="input-group-text">
-                                                          <span class="material-icons">email</span>
-                                                        </div>
-                                                    </div>
-                                        </div>
-                                        <div class="input-group mb-3">
-                                             <input type="text" class="form-control" placeholder="Telephone" name="tel">
-                                                    <div class="input-group-append">
-                                                           <div class="input-group-text">
-                                                               <span class="material-icons">phone_iphone</span>
-                                                             </div>
-                                                     </div>
-                                        </div>  
-
-                                        
-                                        
-                                         
-                                         <div class="row">
-          
-                                             <!-- /.col -->
-                                            <div class="col-4">
-                                                 <button type="submit" class="btn btn-primary btn-block" name="ajouter">Register</button>
-                                            </div>
-                                         <!-- /.col -->
-                                    </form>     
+                            <!-- Illustrations -->
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary">ASKAAN BI BANQUE</h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="text-center">
+                                        <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;"
+                                            src="img/undraw_posting_photo.svg" alt="...">
+                                    </div>
+                                    <p>Askaan bii banque est une banque 100% sénégalaise.
+Askaan bi est faite pour simplifier le quotidien des sénégalais. Aider les jeunes  dans leur financement de projet.
+</p>
+                                    
+                                </div>
                             </div>
+
+                            <!-- Approach -->
                             
-
-
-
-
-                            <!-- fin ajouter-agence -->
-                            </div>
-                          </div>
                         </div>
                     </div>
 

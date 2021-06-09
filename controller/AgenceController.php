@@ -36,6 +36,53 @@ class AgenceController extends Verification{
     }
 
 
+     // requette pour avoir les details de AGENCE
+     public function showAgence ($idAgence) {
+        $sql = "SELECT * FROM Agence WHERE idAgence=:idAgence" ;
+        $connexion = $this->Connection();
+        $stmt = $connexion->prepare($sql);
+        $stmt->bindValue (':idAgence',$idAgence ,PDO::PARAM_INT);
+        $stmt->execute();
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+        return $result;
+      }
+    
+     // update Agent
+
+      public function updateAgence ($nomAgence,$adresse ,$email , $tel, $idAgence) {
+        $sql = "UPDATE Agence SET nomAgence =:nomAgence , adresse =:adresse , email =:email, tel =:tel WHERE idAgence=:idAgence";
+        $connexion = $this->Connection();
+        $stmt = $connexion->prepare($sql);
+        $stmt->bindValue (':nomAgence',$nomAgence,PDO::PARAM_STR);
+        $stmt->bindValue (':adresse',$adresse,PDO::PARAM_STR);
+        $stmt->bindValue (':email',$email,PDO::PARAM_STR);
+        $stmt->bindValue (':tel',$tel,PDO::PARAM_STR);
+        $stmt->bindValue (':idAgence',$idAgence ,PDO::PARAM_INT);
+        $stmt->execute();
+        if($stmt->execute()){
+            header("location:../vue/liste-agence.php");
+        }
+        else{
+            header("location:../vue/ajouter-agence.php");
+        }
+    }
+
+     // supression de l'utilisateur
+
+    public function delAgence ($idAgence) {
+        $sql = "DELETE FROM Agence WHERE idAgence =:idAgence";
+        $connexion = $this->Connection();
+        $stmt = $connexion->prepare($sql);
+        $stmt->bindValue (':idAgence',$idAgence,PDO::PARAM_STR);
+        $stmt->execute();
+        if($stmt->execute()){
+            header("location:../vue/liste-agence.php");
+        }
+        else{
+            header("location:../vue/ajouter-agence.php");
+        }
+    }
+
 
 
 
